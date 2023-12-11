@@ -65,7 +65,7 @@ def traverse_directory(img_file, root_inode=128, path="", excludes=[], skip_dot_
             for skip_path in excludes:
                 if skip_path in current_path: break
             else:
-                traverse_directory(img_file, entry['inumber'], current_path, excludes, skip_dot_directories)
+                traverse_directory(img_file, entry['inumber'], current_path, excludes, skip_dot_dir)
         else:
             print(f"{entry['filetype']}\t{entry['inumber']}\t{current_path}")
 
