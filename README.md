@@ -9,10 +9,10 @@ A data salvage tool from a damaged xfs file system. This has a possibility to re
 ## Usage
 1. First extract xfs metadata with xfs_metadump:
 ```sh
-$ sudo xfs_metadump -w -o -a /dev/DRIVE drive.metadump.ao
+$ sudo xfs_metadump -w -o -a /dev/BROKEN_DRIVE drive.metadump.ao
 $ xfs_mdrestore drive.metadump.ao drive.metadump.ao.img
 ```
-Change DRIVE for your drive point.
+Change BROKEN_DRIVE for your drive point.
 
 2. Second recover the file path list from the dumped metadata:
 ```sh
