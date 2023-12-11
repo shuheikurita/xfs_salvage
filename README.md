@@ -20,7 +20,7 @@ Change BROKEN_DRIVE for your drive point.
 $ python xfs_inode_salvage.py
     --img_file drive.metadump.ao.img \
     --excludes "['uninteresting folders','src','bin','etc']" \
-    --skip_dor_dir
+    --skip_dot_dir
 ```
 The results are tuple of filetype, inode and path.
 
