@@ -1,5 +1,5 @@
 # xfs_salvage
-A data salvage tool from a damaged xfs file system. This has a possibility to recover a file list in the drive and files themselves even after `xfs_repair -L` fails.  ABSOLUTELY NO WARRANTY.
+A data salvage tool from a damaged xfs file system. This has a possibility to recover a file list in the half-broken xfs drive and file contents even after `xfs_repair -L` fails.  ABSOLUTELY NO WARRANTY.
 
 ## Prerequisite
 - xfs_metadump
