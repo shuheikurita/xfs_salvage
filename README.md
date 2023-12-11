@@ -16,8 +16,10 @@ Change DRIVE for your drive point.
 
 2. Second obtain the file list from the dumped metadata:
 ```sh
-$ python xfs_inode_salvage.py -i drive.metadump.ao.img --excludes="['uninteresting folders','src','bin','etc']" --skip_dot_directories=True
+$ python xfs_inode_salvage.py -i drive.metadump.ao.img \
+--excludes="['uninteresting folders','src','bin','etc']" \
+--skip_dot_directories=True
 ```
 The results are tuple of filetype, inode and path.
 
-3. Finally, get the original file with the (slightly modified) [xfs_undelete](https://github.com/shuheikurita/xfs_undelete).
+3. Finally, get the original file contents with the (slightly modified) [xfs_undelete](https://github.com/shuheikurita/xfs_undelete).
