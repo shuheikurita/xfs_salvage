@@ -9,14 +9,14 @@ A data salvage tool from a damaged xfs file system
 ## Usage
 1. First extract xfs metadata with xfs_metadump:
 ```sh
-$ sudo xfs_metadump -w -o -a /dev/DRIVE liat300.metadump.ao
-$ xfs_mdrestore liat300.metadump.ao liat300.metadump.ao.img
+$ sudo xfs_metadump -w -o -a /dev/DRIVE drive.metadump.ao
+$ xfs_mdrestore drive.metadump.ao drive.metadump.ao.img
 ```
 Change DRIVE for your drive point.
 
 2. Second obtain the file list from the dumped metadata:
 ```sh
-$ python xfs_inode_salvage.py -i disk.metadump.ao.img --excludes="['uninteresting folders','src','bin','etc']" --skip_dot_directories=True
+$ python xfs_inode_salvage.py -i drive.metadump.ao.img --excludes="['uninteresting folders','src','bin','etc']" --skip_dot_directories=True
 ```
 The results are tuple of filetype, inode and path.
 
